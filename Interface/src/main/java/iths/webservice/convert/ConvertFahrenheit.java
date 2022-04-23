@@ -1,7 +1,6 @@
 package iths.webservice.convert;
 
-public interface Converter {
+public interface ConvertFahrenheit {
     double convertFahrenheit(double celsius);
 
-    double convertKelvin(double celsius);
 }
