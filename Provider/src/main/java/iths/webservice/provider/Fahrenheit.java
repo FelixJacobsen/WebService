@@ -6,6 +6,6 @@ public class Fahrenheit implements Converter {
 
     @Override
     public double convert(double celsius) {
-        return celsius - 32.0 * 5 / 9;
+        return (celsius - 32.0) * 5 / 9;
     }
 }
