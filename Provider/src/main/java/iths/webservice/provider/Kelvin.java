@@ -1,10 +1,11 @@
 package iths.webservice.provider;
 
-import iths.webservice.convert.ConvertKelvin;
+import iths.webservice.convert.Converter;
 
-public class Kelvin implements ConvertKelvin {
+public class Kelvin implements Converter {
+
     @Override
-    public double convertKelvin(double celsius) {
-        return celsius + 273.15;
+    public double convert(double celsius) {
+        return celsius - 273.15;
     }
 }
