@@ -8,4 +8,11 @@ public class Fahrenheit implements Converter {
     public double convert(double celsius) {
         return (celsius - 32.0) * 5 / 9;
     }
+
+    @Override
+    public String information() {
+        return "Convert celsius to fahrenheit";
+    }
+
+
 }
