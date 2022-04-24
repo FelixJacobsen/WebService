@@ -1,7 +1,5 @@
 package iths.webservice.consumer;
 
-
-
 import iths.webservice.convert.Converter;
 
 import java.util.List;
@@ -17,7 +15,6 @@ public class Main {
         main.run();
 
     }
-
 
     private void run(){
         List<Converter> converterList = getConverterList();
@@ -49,19 +46,18 @@ public class Main {
                 .toList();
     }
 
-    private int getChoice(List<Converter> converters) {
-        printChoices(converters);
+    private int getChoice(List<Converter> converterList) {
+        printChoices(converterList);
         return Integer.parseInt(scanner.nextLine());
     }
 
 
-    private void printChoices(List<Converter> converters) {
-       for(Converter c : converters){
-           System.out.println(c.information());
-       }
+    private void printChoices(List<Converter> converterList) {
+        for (Converter c : converterList)
+            System.out.println(c.information());
     }
 
-    private void printAfterConvert(Converter converter, double celsius){
+    private void printAfterConvert(Converter converter, double celsius) {
         System.out.println("Result: " + converter.convert(celsius));
     }
 
