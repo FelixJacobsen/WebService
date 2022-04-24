@@ -19,17 +19,22 @@ public class Main {
     }
 
 
-
     private void run(){
         List<Converter> converterList = getConverterList();
-        while(true){
+        int option;
+        while(true) {
             double celsius = getCelsius();
-            int option = getChoice(converterList);
-            if(option == 0)
-                break;
-            Converter converter = converterList.get(option - 1);
-            printAfterConvert(converter,celsius);
-            System.out.println("Type 0 to exit the program" + "\n" + "or" );
+            try {
+                option = getChoice(converterList);
+                if (option == 0)
+                    break;
+                Converter converter = converterList.get(option - 1);
+                printAfterConvert(converter, celsius);
+
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Enter [1] to convert into fahrenheit or [2] to convert into kelvin");
+            }
+            System.out.println("Type 0 to exit the program" + "\n" + "or");
         }
     }
 
